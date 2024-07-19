@@ -381,7 +381,8 @@ class Client(object):
                    interval: CandlesticksChartInervals,
                    start_time: datetime = None,
                    end_time: datetime = None,
-                   limit=500):
+                   limit=1000,
+                   type='bid'):
         """
         Kline/candlestick bars for a symbol. Klines are uniquely identified
         by their open time.
@@ -414,6 +415,7 @@ class Client(object):
 
         params = {'symbol': symbol,
                   'interval': interval.value,
+                  'type': type,
                   'limit': limit}
 
         if start_time:

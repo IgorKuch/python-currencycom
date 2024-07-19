@@ -382,7 +382,7 @@ class Client(object):
                    start_time: datetime = None,
                    end_time: datetime = None,
                    limit=1000,
-                   type='bid'):
+                   priceType='bid'):
         """
         Kline/candlestick bars for a symbol. Klines are uniquely identified
         by their open time.
@@ -415,7 +415,7 @@ class Client(object):
 
         params = {'symbol': symbol,
                   'interval': interval.value,
-                  'type': type,
+                  'priceType': priceType,
                   'limit': limit}
 
         if start_time:
